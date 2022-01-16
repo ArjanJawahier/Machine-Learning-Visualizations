@@ -95,4 +95,5 @@ def frame_generator():
 generator = KMeans(unlabeled_data, k=args.k)
 anim = FuncAnimation(fig, animate, frames=frame_generator, interval=100, fargs=(generator,), init_func=init, blit=True, repeat=True)
 writergif = matplotlib.animation.PillowWriter(fps=10)
-anim.save(f"kmeans_anim_k{args.k}.gif", writer=writergif)
+
+anim.save(f"animations/kmeans_anim_k{args.k}.gif", writer=writergif)
